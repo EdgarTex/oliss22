@@ -3,90 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard de Consumo de Energía</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
+            background-color: #f4f4f4;
         }
-        .sidebar {
-            width: 250px;
-            background-color: #2c3e50;
-            color: white;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
+        .container {
+            width: 80%;
+            margin: 0 auto;
             padding: 20px;
-            box-sizing: border-box;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .sidebar h2 {
+        h2 {
             text-align: center;
-            margin-bottom: 30px;
+            color: #333;
         }
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-        .sidebar ul li {
-            margin: 15px 0;
-        }
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 10px;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
-        .sidebar ul li a:hover {
-            background: #34495e;
-        }
-        .main-content {
-            margin-left: 250px;
-            padding: 20px;
-            width: calc(100% - 250px);
-        }
-        .header {
-            background: #ecf0f1;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #bdc3c7;
-        }
-        .header h1 {
-            margin: 0;
-        }
-        .content {
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
         }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Dashboard</h2>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Perfil</a></li>
-            <li><a href="#">Configuraciones</a></li>
-            <li><a href="#">Mensajes</a></li>
-            <li><a href="#">Salir</a></li>
-        </ul>
-    </div>
-    <div class="main-content">
-        <div class="header">
-            <h1>Panel de Control</h1>
-            <div class="user-info">
-                <span>Bienvenido, Usuario</span>
-            </div>
-        </div>
-        <div class="content">
-            <h2>Resumen</h2>
-            <p>Aquí puedes colocar el contenido principal de tu dashboard.</p>
-        </div>
+    <div class="container">
+        <h2>Dashboard de Consumo de Energía</h2>
+        <p><strong>Número DAC CFE:</strong> 1234567890</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Login</th>
+                    <th>Fecha</th>
+                    <th>Gasto por Día (kWh)</th>
+                    <th>Gasto en Pesos por Día</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>usuario1</td>
+                    <td>01/06/2024</td>
+                    <td>15</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>usuario1</td>
+                    <td>02/06/2024</td>
+                    <td>18</td>
+                    <td>$36</td>
+                </tr>
+                <tr>
+                    <td>usuario1</td>
+                    <td>03/06/2024</td>
+                    <td>14</td>
+                    <td>$28</td>
+                </tr>
+                <tr>
+                    <td>usuario1</td>
+                    <td>04/06/2024</td>
+                    <td>20</td>
+                    <td>$40</td>
+                </tr>
+                <tr>
+                    <td>usuario1</td>
+                    <td>05/06/2024</td>
+                    <td>17</td>
+                    <td>$34</td>
+                </tr>
+                <!-- Más filas de datos pueden añadirse aquí -->
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
